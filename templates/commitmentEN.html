@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>אקווריום</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="/CommitmentWall/static/css/commitmentENStyle.css"/>
+		<link rel="stylesheet" type="text/css" href="/CommitmentWall/static/css/myButton.css"/>
+		<script type="text/javascript" src="/CommitmentWall/static/js/jquery-1.6.2.min.js"></script>
+		<script type="text/javascript" src="/CommitmentWall/static/webcam/webcam.js"></script>
+		<script type="text/javascript" src="/CommitmentWall/static/js/scriptCam.js"></script>
+		<script type="text/javascript" src="/CommitmentWall/static/js/commitmentFunctions.js"></script>	
+		
+		
+	</head>
+	
+	<body>
+		<!-- language change menu -->
+		<div id="header">
+			<div class="topNaviagationLink"><a href="commitment.html">عربي</a></div>
+			<div class="topNaviagationLink"><a href="commitmentEN.html">English</a></div>
+			<div class="topNaviagationLink"><a href="commitment.html">עברית</a></div>	
+		</div>
+		<!-- main content of the page -->
+		<div class="contentBox">
+			<div class="innerBox">
+				<div class="contentTitle">כותרת לקטע בעברית!</div>
+				<table  style="width:100%;">
+					<!-- the list of commitments -->
+					<td name="leftSide" style="width: 48%;" valign="top">
+						<div class="contentText">
+						
+							
+							<p style="font-size:28px">select the rules to commit</p><br/>
+							<input class="checkList" type="checkbox" value="0"> take bags to collect all the garbage when we out to picnic in nature. <br/> </input>
+							<input class="checkList" type="checkbox" value="1"> From now on I will use biodegradable bags instead of plastic bags. <br/> </input>
+							<input class="checkList" type="checkbox" value="2"> Drinking bottles I'll put only in recycle garbage. <br/> </input>
+							<input class="checkList" type="checkbox" value="0"> take bags to collect all the garbage when we out to picnic in nature. <br/> </input>
+							<input class="checkList" type="checkbox" value="1"> From now on I will use biodegradable bags instead of plastic bags. <br/> </input>
+							<input class="checkList" type="checkbox" value="2"> Drinking bottles I'll put only in recycle garbage. <br/> </input>
+						</div>
+						<div id="webcamWrapper"> 
+							<div id="camera" style="text-align:center"> </div> <!-- web camera window -->
+							<div id="buttons" style="margin:3px; text-align:center">
+								<button class="myButton" type="button" onclick="webcam.snap()">Take snapshot</button>
+								<button class="myButton" type="button" onclick="webcam.configure('camera')">Configure</button>
+							</div>
+						</div>
+					</td> <!-- END - Commitment list and take photos with webcam -->
+					
+					<!-- Personal Information -->
+					<td name="rightSide" style="width: 48%;" valign="top">
+						<div class="contentText">
+							<p>Maybe I use this format on my site, in any case need to add a few more words to make it look good.
+							Maybe I use this format on my site, in any case need to add a few more words to make it look good
+							</p><br/><br/>
+							
+							<table  class="table"> 
+								<tr >
+									<td class="tableData">First name:</td>
+									<td><input> </input></td>
+								</tr>
+								<tr>
+									<td class="tableData">Last name:</td>
+									<td><input> </input></td>
+								</tr>
+								<tr>
+									<td class="tableData">E-mail:</td>
+									<td><input> </input></td>
+								</tr>
+								<tr>
+									<td class="tableData">birthday:</td>
+									<td><input> </input></td>
+								</tr>
+								<tr>
+									<td class="tableData">Country:</td>
+									<td><input> </input></td>
+								</tr>
+								<tr>
+									<td class="tableData">City:</td>
+									<td><input> </input></td>
+								</tr>
+								<tr>
+									<td class="tableData"></td>
+									<td>
+										<button class="myButton" type="button" onclick="redirect('/commitmentWall/templates/index.html')">Submit</button>
+										<button class="myButton" type="button" onclick="redirect('/commitmentWall/templates/index.html')">Cancel</button>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</td> <!-- END - Personal Information -->
+				</table>
+			</div>
+		</div>
+		<!-- footer --> 
+		<div id="footer">web development by <a href="mailto:matanshhlomi88@gmail.com">Matan Shlomi</a></div>
+	</body>
+	
+
+</html>

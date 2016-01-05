@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>אקווריום</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="/CommitmentWall/static/css/commitmentStyle.css"/>
+		<link rel="stylesheet" type="text/css" href="/CommitmentWall/static/css/myButton.css"/>
+		<script type="text/javascript" src="/CommitmentWall/static/js/jquery-1.6.2.min.js"></script>
+		<script type="text/javascript" src="/CommitmentWall/static/webcam/webcam.js"></script>
+		<script type="text/javascript" src="/CommitmentWall/static/js/scriptCam.js"></script>
+		<script type="text/javascript" src="/CommitmentWall/static/js/commitmentFunctions.js"></script>	
+		
+		
+	</head>
+	
+	<body>
+		<!-- language change menu -->
+		<div id="header">
+			<div class="topNaviagationLink"><a href="commitment.html">عربي</a></div>
+			<div class="topNaviagationLink"><a href="commitmentEN.html">English</a></div>
+			<div class="topNaviagationLink"><a href="commitment.html">עברית</a></div>	
+		</div>
+		<!-- main content of the page -->
+		<div class="contentBox">
+			<div class="innerBox">
+				<div class="contentTitle">כותרת לקטע בעברית!</div>
+				
+				<table  style="width:100%;">
+					<!-- Personal Information -->
+					<td name="rightSide" style="width: 48%;" valign="top">
+						<div class="contentText"><p>אולי אני ישתמש בתבנית הזאת באתר שלי, בכל מקרה צריך להוסיף עוד כמה מילים כדי שזה יראה מלא וארוך.
+							בקיצור, אני מקווה שזה נראה טוב, ושיהיה אפשר להשתמש בתבנית הזאת באתר. תודה רבה מתן שלומי.</p><br/><br/>
+							
+							<table  class="table"> 
+								<tr >
+									<td class="tableData">שם פרטי:</td>
+									<td><input> </input></td>
+								</tr>
+								<tr>
+									<td class="tableData">שם משפחה:</td>
+									<td><input> </input></td>
+								</tr>
+								<tr>
+									<td class="tableData">כתובת מייל:</td>
+									<td><input> </input></td>
+								</tr>
+								<tr>
+									<td class="tableData">תאריך לידה:</td>
+									<td><input> </input></td>
+								</tr>
+								<tr>
+									<td class="tableData">מדינה:</td>
+									<td><input> </input></td>
+								</tr>
+								<tr>
+									<td class="tableData">עיר:</td>
+									<td><input> </input></td>
+								</tr>
+								<tr>
+									<td class="tableData"></td>
+									<td>
+										<button class="myButton" type="button" onclick="redirect('/commitmentWall/templates/index.html')">אישור</button>
+										<button class="myButton" type="button" onclick="redirect('/commitmentWall/templates/index.html')">ביטול</button>
+									</td>
+								</tr>
+							</table>
+							
+						</div>
+					</td> <!-- END - Personal Information -->
+					<!-- Commitment list and take photos with webcam -->
+					<td name="leftSide" style="width: 48%;" valign="top">
+						<div class="contentText"><p style="font-size:28px">תבחרו את ככלי ההתנהגות עליהם תתחייבו!</p><br/>
+							<input type="checkbox" value="0"> ביציאה לפיקניק ולטבע ניקח איתנו שקיות ונאסוף את כל הזבל. <br/><br/> </input>
+							<input type="checkbox" value="1"> מעכשיו אני אשתמש בשקיות מתכלות במקום שקיות ניילון. <br/><br/> </input>
+							<input type="checkbox" value="2"> בקבוקי שתיה אני אשים רק במיחזורית <br/><br/> </input>
+							<input type="checkbox" value="0"> ביציאה לפיקניק ולטבע ניקח איתנו שקיות ונאסוף את כל הזבל. <br/><br/> </input>
+							<input type="checkbox" value="1"> מעכשיו אני אשתמש בשקיות מתכלות במקום שקיות ניילון. <br/><br/> </input>
+							<input type="checkbox" value="2"> בקבוקי שתיה אני אשים רק במיחזורית <br/><br/> </input>
+						</div>
+						<div id="webcamWrapper">
+							<div id="camera" style="text-align:center"> </div> <!-- web camera window -->
+							<div id="buttons" style="margin:3px; text-align:center">
+								<button class="myButton" type="button" onclick="webcam.snap()">צלם תמונה</button>
+								<button class="myButton" type="button" onclick="webcam.configure('camera')">הגדרות מצלמה</button>
+							</div>
+						</div>
+					</td> <!-- END - Commitment list and take photos with webcam -->
+				</table>
+			</div>
+		</div>
+		<!-- footer --> 
+		<div id="footer">web development by <a href="mailto:matanshhlomi88@gmail.com">Matan Shlomi</a></div>
+	</body>
+	
+
+</html>
