@@ -34,7 +34,21 @@
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#468ccf', endColorstr='#63b8ee',GradientType=0);
 	background-color:#468ccf;
 }
+
 .myButton:active {
 	position:relative;
 	top:1px;
+}
+
+
+
+button[type=button]:disabled {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #63b8ee), color-stop(1, #468ccf));
+	background:-moz-linear-gradient(top, #e8e8e8 75%, #468ccf 100%);
+	background:-webkit-linear-gradient(top, #e8e8e8 75%, #468ccf 100%);
+	background:-o-linear-gradient(top, #e8e8e8 75%, #468ccf 100%);
+	background:-ms-linear-gradient(top, #e8e8e8 75%, #468ccf 100%);
+	background:linear-gradient(to bottom, #e8e8e8 75%, #468ccf 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e8e8e8', endColorstr='#468ccf',GradientType=0);
+	background-color:#e8e8e8;
 }

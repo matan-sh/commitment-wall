@@ -1,9 +1,3 @@
-/* redirect the page to another URL */
-function redirect(url)
-{
-	window.open(url, "_self");
-};
-
 
 /* add the facebook buttons "like" and "share" to the web page */
 (function(d, s, id) {
