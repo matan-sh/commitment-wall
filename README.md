@@ -4,7 +4,7 @@
 (the opening of the aquarium is scheduled for the end of 2016)
 <br/><br/>
 
-###the mian parts of the project are:
+###the main parts of the project are:
 
 <b>Registration stations -</b> the visitors will be able to sign on a number of behavior rules that will ensure protection of nature.
 <br/>To sign on these rules the visitors need to fill personal details and take a picture of their faces.
