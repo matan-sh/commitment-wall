@@ -2,11 +2,18 @@
 <html>
 	<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	
 	<link rel="stylesheet" type="text/css" href="/CommitmentWall/static/css/indexStyle.css"/>
 	<script type="text/javascript" src="/CommitmentWall/static/js/redirect.js"></script>
 	<script type="text/javascript" src="/CommitmentWall/static/js/facebook_buttons.js"></script>
 	<link rel="stylesheet" type="text/css" href="/CommitmentWall/static/css/myButton.css"/>
+	
 	
 	<title>אקווריום</title>
 	</head>
@@ -14,9 +21,7 @@
 	<body>
 
 		<div id="header">
-			<div class="topNaviagationLink"><a href="index.html">عربي</a></div>
-			<div class="topNaviagationLink"><a href="indexEN.html">English</a></div>
-			<div class="topNaviagationLink"><a href="index.html">עברית</a></div>
+			<div class="topNaviagationLink"></div>
 		</div>
 		<div id="mainPicture">
 			<div class="picture">
@@ -27,36 +32,73 @@
 		</div>
 		<div class="contentBox">
 			<div class="innerBox">
-				<div class="contentTitle">ברוכים הבאים לקיר המחויבות של האקווריום!</div>
-				<div class="contentText">
-					<p>בגן החיות רוצים לקדם מסרים של חינוך ושמירה על הטבע. לכן בעוד כשנה ייפתח האקווריום הראשון בישראל.
-					האקווריום שנבנה בשטח ההרחבה של גן החיות התנ"כי בירושלים.</p><br />
-					<p>האקווריום יתמקד בים התיכון ובים האדום מתוך הבנה שבעלי החיים ובפרט הדגים שחיים בהם נמצאים בסכנת הכחדה. 
-					בכ-6 דונם של שטח בנוי יוצגו לקהל המבקרים מינים רבים של כרישים, דגים, מדוזות וצבי ים בתוך מיכלי ענק 
-					ואקווריומים בגדלים שונים, כולם בתצוגה פנימית, מוחשכת ואלגנטית. 
-					בחלקו האחרון של האקווריום יוקם "קיר מחויבות" ובו מתחייבים המבקרים על מספר "דברות" או כללי התנהגות בנושאים הקשורים לסביבה הימית
-					 </p><br />
-					<p>האקווריום יתמקד בים התיכון ובים האדום מתוך הבנה שבעלי החיים ובפרט הדגים שחיים בהם נמצאים בסכנת הכחדה. 
-					בכ-6 דונם של שטח בנוי יוצגו לקהל המבקרים מינים רבים של כרישים, דגים, מדוזות וצבי ים בתוך מיכלי ענק ואקווריומים בגדלים שונים, כול
-					ם בתצוגה פנימית, מוחשכת ואלגנטית. 
-					בחלקו האחרון של האקווריום יוקם "קיר מחויבות" ובו מתחייבים המבקרים על מספר "דברות" או כללי התנהגות בנושאים הקשורים לסביבה הימית
-					(שמירת על סביבת חוף הים, דיג חוקי וכו'
-					)</p><br/><br/>
+				<div class="row">
+					<div class="col-sm-4" style="text-align:left">
+						<h3 style="text-align:center">English</h3> 
+						<div class="contentText" >
+							<p>the Jerusalem Biblical Zoo want to promote messages of education and conservation of nature. 
+							so the first aquarium in the country will open in a one year. 
+							Aquarium built in the expansion area of the Jerusalem Biblical Zoo.</p><br/>
+							<p>Aquarium will focus on the Mediterranean and the Red Sea with the understanding that animals,
+								particularly fish that live in them are threatened with extinction. By 6 hectares
+								of built-up area will be presented to visitors many species of sharks, fish, jellyfish <br/><br/>
+							</p>
 
-					<div style="text-align:center">					
-						<button class="myButton" type="button"  onclick="redirect('/commitmentWall/templates/commitment.html')">לחתימה לחץ כאן</button>	
-						<br/><br/>
-						<div class="fb-like"
-							data-href="https://www.facebook.com/JerusalemBiblicalZoo/timeline" 
-							data-layout="button_count" 
-							data-action="like" 
-							data-show-faces="true" 
-							data-share="true">
+							<div style="text-align:center">					
+								<!-- <button class="myButton" type="button"  onclick="redirect('/commitmentWall/templates/commitmentEN.html')">commit here</button> -->
+								<button class="myButton" type="button"  onclick="checkLocation('/commitmentWall/templates/commitmentEN.html')">commit here</button>
+								<br/>
+							</div>							
+							
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<h3 style="text-align:center">عربي</h3> 
+						<div class="contentText">
+							<p>في الكتاب المقدس حديقة حيوان القدس ترغب في تعزيز الرسائل التعليم والمحافظة على الطبيعة. لذلك الحوض 
+							الأول في البلاد ستفتح في سنة واحدة. بنيت الحوض في مجال التوسع في الكتاب المقدس حديقة حيوان القدس</p><br />
+							<p>ستركز الحوض على البحر الأبيض المتوسط والبحر الأحمر على أن يكون مفهوما أن الحيوانات، وخاصة الأسم
+							اك التي تعيش فيها مهددة بالانقراض. قبل 6 هكتارات من المساحة المبنية ستعرض للزوار العديد من أنواع
+							أسماك القرش والأسماك وقنديل البحر.
+							ستركز الحوض على البحر الأبيض المتوسط والبحر الأحمر على أن يكون مفهوما أن الحيوانات، وخاصة الأسم
+							اك التي تعيش فيها مهددة بالانقراض. قبل 6 هكتارات من المساحة المبنية ستعرض للزوار العديد من أنواع
+							أسماك القرش والأسماك وقنديل البحر
+							 </p><br/>
+							
+							<div style="text-align:center">					
+								<!-- <button class="myButton" type="button"  onclick="redirect('/commitmentWall/templates/commitment.html')">لارتكاب صحفى هنا</button> -->
+								<button class="myButton" type="button"  onclick="checkLocation('/commitmentWall/templates/commitment.html')">ارتكاب صحفى هنا</button>
+								<br/>
+							</div>
+
+							
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<h3 style="text-align:center">עברית</h3>
+						<div class="contentText">
+							<p>בגן החיות רוצים לקדם מסרים של חינוך ושמירה על הטבע. לכן בעוד כשנה ייפתח האקווריום הראשון בישראל.
+							האקווריום שנבנה בשטח ההרחבה של גן החיות התנ"כי בירושלים.</p><br />
+							<p>האקווריום יתמקד בים התיכון ובים האדום מתוך הבנה שבעלי החיים ובפרט הדגים שחיים בהם נמצאים בסכנת הכחדה. 
+							בכ-6 דונם של שטח בנוי יוצגו לקהל המבקרים מינים רבים של כרישים, דגים, מדוזות וצבי ים בתוך מיכלי ענק 
+							ואקווריומים בגדלים שונים, כולם בתצוגה פנימית, מוחשכת ואלגנטית. 
+							בחלקו האחרון של האקווריום יוקם "קיר מחויבות" ובו מתחייבים המבקרים על מספר "דברות" או כללי התנהגות בנושאים הקשורים לסביבה הימית
+							 </p><br />
+
+							<div style="text-align:center">					
+								<!-- <button class="myButton" type="button"  onclick="redirect('/commitmentWall/templates/commitment.html')" >לחתימה לחץ כאן</button>	-->
+								<button class="myButton" type="button"  onclick="checkLocation('/commitmentWall/templates/commitment.html')">לחתימה לחץ כאן</button>
+								<br/>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div id="footer">web development by <a href="mailto:matanshhlomi88@gmail.com">Matan Shlomi</a></div>
+		<div id="footer">
+			<div style="margin-top:-3px;">
+				web development by <a href="mailto:matanshhlomi88@gmail.com">Matan Shlomi</a>
+			</div>
+		</div>
 	</body>
 </html>
