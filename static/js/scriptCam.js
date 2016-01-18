@@ -33,8 +33,6 @@ function snapshot()
 			webcam.reset();
 			document.getElementById("snapshot").innerHTML = "צלם תמונה";
 			btm.disabled = true;
-			
-			
 		}	
 	} else {
 		webcam.freeze();
