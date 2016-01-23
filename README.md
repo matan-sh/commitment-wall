@@ -14,3 +14,10 @@
 
 <b>note:</b> Only people who visit the aquarium can do it.
 
+
+<br/><br/>
+# Distribution
+
+[the Commitment Wall](http://matan.coolpage.biz/templates/theWall.html)
+
+[the Registration stations page](http://matan.coolpage.biz/templates)
