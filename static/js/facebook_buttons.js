@@ -1,5 +1,5 @@
 
-/* add the facebook buttons "like" and "share" to the web page */
+// add the facebook buttons "like" and "share" to the web page
 (function(d, s, id) {
 	var js, fjs = d.getElementsByTagName(s)[0];
 	if (d.getElementById(id)) return;

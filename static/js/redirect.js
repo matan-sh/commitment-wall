@@ -1,8 +1,8 @@
 /* redirect the page to another URL */
-function redirect(url)
+function redirect(urlLink)
 {
-	window.open(url, "_self");
-};
+	window.open(urlLink, "_self");
+}
 
 
 /*
@@ -24,8 +24,7 @@ function checkLocation(latitude, longitude)
 		if(latitude>31 && latitude<32)
 			window.open("/commitmentWall/templates/commitment.html", "_self"); 
 		else
-			window.open("https://www.google.co.il/", "_self"); 
-		
+			window.open("https://www.google.co.il/", "_self");
 	}
 } 
 */
@@ -44,19 +43,20 @@ function checkLocation(u)
 	} else {
 		x.innerHTML = "Geolocation is not supported by this browser.";
 	}
-};
+}
 
 
 function showPosition(position) 
 {
 	alert("Latitude: " + position.coords.latitude + "\n" +
 	"Longitude: " + position.coords.longitude);
-/* position.coords.latitude>31 && position.coords.latitude<32 */
+
+	/* position.coords.latitude>31 && position.coords.latitude<32 */
 	if(position.coords.latitude>31 && position.coords.latitude<32)
 	{
-		redirect(url); 
+		redirect(url);
 	}
 	else {
-		redirect("/commitmentWall/templates/locationError.html"); 
+		redirect("/commitmentWall/templates/locationError.html");
 	}
-};
+}
