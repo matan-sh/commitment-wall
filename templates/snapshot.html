@@ -3,12 +3,12 @@
 	<head>
 		<title>אקווריום</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<link rel="stylesheet" type="text/css" href="/CommitmentWall/static/css/snapshotStyle.css"/>
-		<link rel="stylesheet" type="text/css" href="/CommitmentWall/static/css/myButton.css"/>
-		<script type="text/javascript" src="/CommitmentWall/static/js/jquery-1.6.2.min.js"></script>
-		<script type="text/javascript" src="/CommitmentWall/static/webcam/webcam.js"></script>
-		<script type="text/javascript" src="/CommitmentWall/static/js/scriptCam.js"></script>
-		<script type="text/javascript" src="/CommitmentWall/static/js/redirect.js"></script>
+		<link rel="stylesheet" type="text/css" href="../static/css/snapshotStyle.css"/>
+		<link rel="stylesheet" type="text/css" href="../static/css/myButton.css"/>
+		<script type="text/javascript" src="../static/js/jquery-1.6.2.min.js"></script>
+		<script type="text/javascript" src="../static/webcam/webcam.js"></script>
+		<script type="text/javascript" src="../static/js/scriptCam.js"></script>
+		<script type="text/javascript" src="../static/js/redirect.js"></script>
 		
 	</head>
 	
@@ -23,7 +23,7 @@
 				<div id="webcamWrapper">
 					<div id="camera" style="text-align:center"> </div> <!-- web camera window -->
 					<div id="buttons" style="margin:3px; text-align:center">
-						<button class="myButton" id="snapshot" type="button" onclick="snapshot()">צלם תמונה</button>
+						<button class="myButton" id="snapshot" name="snapshot" type="button" onclick="snapshot()">צלם תמונה</button>
 						<button class="myButton" id="savePic"  type="button" onclick="savePic();"  disabled="disabled">שמור תמונה</button>
 						<button class="myButton" type="button" onclick="webcam.configure('camera')">הגדרות מצלמה</button>
 					</div>

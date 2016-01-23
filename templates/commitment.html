@@ -4,75 +4,83 @@
 		<title>אקווריום</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="/CommitmentWall/static/css/commitmentStyle.css"/>
-		<link rel="stylesheet" type="text/css" href="/CommitmentWall/static/css/myButton.css"/>
-		<script type="text/javascript" src="/CommitmentWall/static/js/redirect.js"></script>
-		<script type="text/javascript" src="/CommitmentWall/static/js/deleteData.js"></script>
-		
-		
+		<link rel="stylesheet" type="text/css" href="../static/css/commitmentStyle.css"/>
+		<link rel="stylesheet" type="text/css" href="../static/css/myButton.css"/>
+		<script type="text/javascript" src="../static/js/redirect.js"></script>
+		<script type="text/javascript" src="../static/js/deleteData.js"></script>
 	</head>
 	
 	<body>
-		<!-- language change menu -->
-		<div id="header">
-			<div class="topNaviagationLink"></div>	
-		</div>
+        <div id="header"></div>
 		<!-- main content of the page -->
 		<div class="contentBox">
 			<div class="innerBox">
 				<div class="contentTitle">כותרת לקטע בעברית!</div>
 				
-				<table  style="width:100%;">
+				<table style="width:100%;"><tr>
 					<!-- Personal Information -->
-					<td name="rightSide" style="width: 48%;" valign="top">
+					<td style="width: 48%;" valign="top">
 						<div class="contentText"><p>אולי אני ישתמש בתבנית הזאת באתר שלי, בכל מקרה צריך להוסיף עוד כמה מילים כדי שזה יראה מלא וארוך.
 							בקיצור, אני מקווה שזה נראה טוב, ושיהיה אפשר להשתמש בתבנית הזאת באתר. תודה רבה מתן שלומי.</p><br/>
-							
-							<table  class="table"> 
+
+							<table class="table">
 								<tr >
 									<td class="tableData">שם פרטי:</td>
-									<td><input id="firstName"> </input></td>
+									<td><label><input id="firstName"/></label></td>
 								</tr>
 								<tr>
 									<td class="tableData">שם משפחה:</td>
-									<td><input id="lastName"> </input></td>
+									<td><label><input id="lastName"/></label></td>
 								</tr>
 								<tr>
 									<td class="tableData">כתובת מייל:</td>
-									<td><input id="mail"> </input></td>
+									<td><label><input id="mail" /></label></td>
 								</tr>
 								<tr>
 									<td class="tableData">תאריך לידה:</td>
-									<td><input id="dateOfBirth"> </input></td>
+									<td><label><input id="dateOfBirth" /> </label></td>
 								</tr>
 								<tr>
 									<td class="tableData">מדינה:</td>
-									<td><input id="country"> </input></td>
+									<td><label><input id="country" /> </label></td>
 								</tr>
 								<tr>
 									<td class="tableData">עיר:</td>
-									<td><input id="city"> </input></td>
+									<td><label><input id="city" /> </label></td>
 								</tr>
 							</table>
-							
+
 						</div>
 					</td> <!-- END - Personal Information -->
 					<!-- Commitment list and take photos with webcam -->
-					<td name="leftSide" style="width: 48%;" valign="top">
+					<td style="width: 48%;" valign="top">
 						<div class="contentText"><p style="font-size:28px">תבחרו את ככלי ההתנהגות עליהם תתחייבו!</p><br/>
-							<input type="checkbox" value="0" checked> ביציאה לפיקניק ולטבע ניקח איתנו שקיות ונאסוף את כל הזבל. <br/><br/> </input>
-							<input type="checkbox" value="1" checked> מעכשיו אני אשתמש בשקיות מתכלות במקום שקיות ניילון. <br/><br/> </input>
-							<input type="checkbox" value="2" checked> בקבוקי שתיה אני אשים רק במיחזורית <br/><br/> </input>
-							<input type="checkbox" value="0" checked> ביציאה לפיקניק ולטבע ניקח איתנו שקיות ונאסוף את כל הזבל. <br/><br/> </input>
-							<input type="checkbox" value="1" checked> מעכשיו אני אשתמש בשקיות מתכלות במקום שקיות ניילון. <br/><br/> </input>
-							<input type="checkbox" value="2" checked> בקבוקי שתיה אני אשים רק במיחזורית <br/><br/> </input>
+                            <label>
+                                <input type="checkbox" value="0" checked disabled/> ביציאה לפיקניק ולטבע ניקח איתנו שקיות ונאסוף את כל הזבל. <br/><br/>
+                            </label>
+                            <label>
+                                <input type="checkbox" value="1" checked disabled/> מעכשיו אני אשתמש בשקיות מתכלות במקום שקיות ניילון. <br/><br/>
+                            </label>
+                            <label>
+                                <input type="checkbox" value="2" checked disabled/> בקבוקי שתיה אני אשים רק במיחזורית <br/><br/>
+                            </label>
+                            <label>
+                                <input type="checkbox" value="0" checked disabled/> ביציאה לפיקניק ולטבע ניקח איתנו שקיות ונאסוף את כל הזבל. <br/><br/>
+                            </label>
+                            <label>
+                                <input type="checkbox" value="1" checked disabled/> מעכשיו אני אשתמש בשקיות מתכלות במקום שקיות ניילון. <br/><br/>
+                            </label>
+                            <label>
+                                <input type="checkbox" value="2" checked disabled/> בקבוקי שתיה אני אשים רק במיחזורית <br/><br/>
+                            </label>
 						</div>
 					</td> <!-- END - Commitment list and take photos with webcam -->
+				</tr>
 				</table>
 				<div id="webcamWrapper">
 					<div id="buttons" style="margin:3px; text-align:center">
 						<button class="myButton" type="button" onclick="deleteData();">איפוס</button>
-						<button class="myButton" type="button" onclick="redirect('/commitmentWall/templates/snapshot.html')">צלם תמונה</button>
+						<button class="myButton" type="button" onclick="redirect('../templates/snapshot.html')">צלם תמונה</button>
 					</div>
 				</div>				
 			</div>
