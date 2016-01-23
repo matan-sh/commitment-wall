@@ -21,3 +21,12 @@
 [the Commitment Wall](http://matan.coolpage.biz/templates/theWall.html)
 
 [the Registration stations page](http://matan.coolpage.biz/templates)
+
+
+# QR-code
+
+### Scan for "the Wall" website 
+![](https://cloud.githubusercontent.com/assets/11423686/12530000/f16cc70a-c1d6-11e5-99bd-81ea64cb65b1.png)
+
+### Scan for the Registration stations website 
+![](https://cloud.githubusercontent.com/assets/11423686/12530017/eaf58596-c1d7-11e5-9d21-75ab743b0f07.png)
