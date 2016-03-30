@@ -16,7 +16,8 @@
 
 
 <br/><br/>
-# Distribution
+# Distribution 
+#####(Prototype Distribution)
 
 [the Commitment Wall](http://matan.coolpage.biz/templates/theWall.html)
 
