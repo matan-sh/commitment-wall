@@ -1,43 +1,47 @@
 <?php
 	$index = $_POST["index"];
-		
-	switch($index) {
-		case 0: {
-			deleteCommitment();
-			break;
-		}
-		case 1: {
-			break;
-		}
-		case 2: {
-			break;
-		}
-		case 3: {
-			deletePerson();
-			break;
-		}
-		case 4: {
-			break;
-		}
+	$id = $_POST["id"];
+	if($index == 0) {
+		//deleteCommitment($id);
+		deleteFromDB($id, "commitments");
+	} 
+	else if($index == 8) {
+		deleteFromDB($id, "admin");
 	}
-
-	function deletePerson() {
-		$connect = mysqli_connect("localhost", "root", "", "checks");
-		mysqli_query($connect, "SET NAMES UTF8");
-		$sql = "DELETE FROM person WHERE id = '".$_POST["id"]."'";
-		if(mysqli_query($connect, $sql))
-		{
-			  echo 'Data Deleted';
-		}
+	else {
+		//deleteVisitor($id);
+		deleteFromDB($id, "visitors");
 	}
 	
-	function deleteCommitment() {
-		$connect = mysqli_connect("localhost", "root", "", "commitment_wall");
-		mysqli_query($connect, "SET NAMES UTF8");
-		$sql = "DELETE FROM commitments WHERE id = '".$_POST["id"]."'";
-		if(mysqli_query($connect, $sql))
-		{
-			  echo 'Data Deleted';
-		}
+/*
+function deleteCommitment($id) {
+	$connect = mysqli_connect("localhost", "root", "", "commitment_wall");
+	mysqli_query($connect, "SET NAMES UTF8");
+	$sql = "DELETE FROM commitments WHERE id = '".$id."'";
+	if(mysqli_query($connect, $sql))
+	{
+		  echo 'Commitment Deleted';
 	}
+}
+
+
+function deleteVisitor($id) {
+	$connect = mysqli_connect("localhost", "root", "", "commitment_wall");
+	mysqli_query($connect, "SET NAMES UTF8");
+	$sql = "DELETE FROM visitors WHERE id='".$id."'";
+	if(mysqli_query($connect, $sql))
+	{
+		  echo 'Visitor Deleted';
+	}
+}*/
+
+function deleteFromDB($id, $str) {
+	$connect = mysqli_connect("localhost", "root", "", "commitment_wall");
+	mysqli_query($connect, "SET NAMES UTF8");
+	$sql = "DELETE FROM ".$str." WHERE id='".$id."'";
+	if(mysqli_query($connect, $sql))
+	{
+		  echo $str.' Deleted';
+	}
+}
  ?>

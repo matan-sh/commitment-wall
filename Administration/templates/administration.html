@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>אקווריום</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="/Administration/static/css/administration.css"/> 
+		<link rel="stylesheet" type="text/css" href="/Administration/static/css/bootstrap.css"/>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
+	</head>
+
+
+	<body>	
+		<div id="header">	</div>
+		<!-- main content of the page -->
+		<div class="contentBox">
+			<div class="innerBox">
+				<div class="contentTitle" ><h1 style="text-align:center;"><u>דף אדמיניסטרציה - קיר המחויבות</u></h1></div>
+				<!-- selection options -->
+				<div class="contentText">
+					<div class="row">
+						<div class="col-sm-5" >
+							<div id="freeText" dir="rtl"><h2>להוראות לחץ <font style="color:blue"> כאן...</font></h2></div>
+							<div id="hiddenText" dir="rtl" style="display:none" > 
+								בחר/י נתונים להציג ולאחר מכן לחץ על "להוראות לחץ כאן..".
+							</div>
+						</div>
+						<div class="col-sm-7">
+							<div class="contentTitle">בחר/י מהרשימה את הנתונים שברצונך לראות</div> <br/>
+
+							<div class="row">
+								<!-- additional parameters -->
+								<div class="col-sm-6" >
+									<br/><br/><br/>
+									<form>
+										<input id="email" type="text" placeholder="E-mail" style="margin:2px" disabled>
+										<br/>
+										<input id="visitor_id" type="number" placeholder="id" style="margin:2px" disabled>
+										<br/>
+										מ- <input type="number" id="ageFrom" max="9999" min="1900" placeholder="from" size="4" style="margin:2px" disabled>
+										עד <input type="number" id="ageTo"   max="9999" min="1900" placeholder="to"   size="4" style="margin:2px" disabled>
+										<br/>
+										<select id="languages_selected" style="margin:2px" disabled>
+											<option value="Hebrew">עברית</option>
+											<option value="English">אנגלית</option>
+											<option value="Arabic">ערבית</option>
+										</select>
+										<br/>
+										<select id="country_selected" style="margin:2px" disabled>
+											<option value="israel">ישראל</option>
+											<option value="usa">ארה"ב</option>
+											<option value="france">צרפת</option>
+											<option value="italy">איטליה</option>
+											<option value="japan">יפן</option>
+											<option value="china">סין</option>
+										</select>
+										<br/>
+									</form>
+								</div>
+								<!-- the options to select -->
+								<div class="col-sm-6" >
+									<div class="inputDataList">
+										<input id="inputDL0" value="0" type="radio" checked> הצג את כללי ההתנהגות: </input> 
+									</div>
+									<div class="inputDataList"> 
+										<input id="inputDL1" value="1" type="radio"> הצג את פרטי כל המבקרים: </input> 
+									</div>
+									<div class="inputDataList"> 
+										<input id="inputDL2" value="2" type="radio"> חפש משתמש לפי כתובת מייל: </input> 
+									</div>
+									<div class="inputDataList"> 
+										<input id="inputDL3" value="3" type="radio"> חפש משתמש לפי מספר id: </input> 
+									</div>
+									<div class="inputDataList"> 
+										<input id="inputDL4" value="4" type="radio"> הצג את המשתמשים לפי טווח גילאים: </input> 
+									</div>
+									<div class="inputDataList"> 
+										<input id="inputDL5" value="5" type="radio"> הצג את המשתמשים לפי שפה: </input> 
+									</div>
+									<div class="inputDataList"> 
+										<input id="inputDL6" value="6" type="radio"> הצג את המשתמשים לפי מדינה: </input>
+									</div>
+									<div class="inputDataList"> 
+										<input id="inputDL7" value="7" type="radio"> הצג את קטעי הטקסט מעמדות הרישום: </input>
+									</div>
+									<div class="inputDataList"> 
+										<input id="inputDL8" value="8" type="radio"> הצג את מנהלים של דף זה: </input>
+									</div>
+									<div class="inputDataList" id="add_manager"> 
+										<input id="inputDL9" value="9" type="radio"> הוסף מנהל חדש: </input>
+									</div>
+								</div>
+								<!--END - the options to select -->
+							</div>
+							<button id="showData_btn" type="button">הצג נתונים</button>
+							<button id="cancel_btn" type="button" onclick="resetList(-1);">איפוס</button>
+							<br/><br/>
+							<button id="excel_btn" type="button" onclick="tableToExcel('live_data');">הדפס לקובץ - Excel</button>
+						</div>
+					</div>
+				</div>
+				<!-- END - selection options -->
+			</div>
+			<!-- dynamic table -->
+			<div class="container">  
+				<div id="tableScroll">
+					<br/><br/>
+					<div id="live_data"></div>
+				</div>
+			</div>
+			<!-- END - dynamic table -->
+		</div>
+		<!-- footer  -->
+		<div id="footer" style="padding-top:0px" > web development by <a href="mailto:matanshhlomi88@gmail.com">Matan Shlomi</a></div>
+		
+		<script type="text/javascript" src="../static/js/init.js"></script>
+		<script type="text/javascript" src="../static/js/administration.js"></script>
+													
+	</body>
+
+</html>

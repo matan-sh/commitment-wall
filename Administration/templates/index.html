@@ -3,14 +3,12 @@
 	<head>
 		<title>אקווריום</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<link rel="stylesheet" type="text/css" href="/Administration/static/css/indexStyle.css"/> 
-		<script type="text/javascript" src="../static/js/administration.js"></script>
-		
-		
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
-		
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- <link rel="stylesheet" type="text/css" href="/Administration/static/css/bootstrap.css"/> -->
+		<link rel="stylesheet" type="text/css" href="/Administration/static/css/indexStyle.css"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<script type="text/javascript" src="../static/js/index.js"></script>
+		
 	</head>
 
 
@@ -18,48 +16,38 @@
 		<div id="header">	</div>
 		<!-- main content of the page -->
 		<div class="contentBox">
-			<div class="innerBox">
+			<div class="innerBox" >
 				<div class="contentTitle" ><h1 style="text-align:center;"><u>דף אדמיניסטרציה - קיר המחויבות</u></h1></div>
-				<!-- Personal Information -->				
+				<!-- selection options -->
 				<div class="contentText">
-					<div class="row">
-						<div class="col-sm-6" >
-							<div id="freeText" dir="rtl"><h2>להוראות לחץ <font style="color:blue"> כאן...</font></h2></div>
-							<div id="hiddenText" dir="rtl" style="display:none" > 
-								בחר/י נתונים להציג ולאחר מכן לחץ על "להוראות לחץ כאן..".
-							</div>
-						</div>
-						<div class="col-sm-6">						
-							<div class="contentTitle">בחר/י מהרשימה את הנתונים שברצונך לראות</div> <br/>
-							
-							<div class="inputDataList"> <input id="inputDL0" value="0" type="radio" checked> הצג את כללי ההתנהגות: </input> </div>
-							<div class="inputDataList"> <input id="inputDL1" value="1" type="radio"> הצג את מורשי הגישה לדף האדמיניסטרציה: </input> </div>
-							<div class="inputDataList"> <input id="inputDL2" value="2" type="radio"> הצג את פרטי כל המבקרים: </input> </div>
-							<div class="inputDataList"> <input id="inputDL3" value="3" type="radio"> הצג את המשתמשים לפי מדינה: </input> </div>
-							<div class="inputDataList"> <input id="inputDL4" value="4" type="radio"> הצג את המשתמשים לפי עיר: </input> </div>
-							
-							<button class="myButton" id="showData_btn" type="button" onclick="">הצג נתונים</button>
-							<button class="myButton" id="cancel_btn" type="button" onclick="resetList(-1);">ביטול</button>
-						</div>
-					</div>
+					<br/><br/>
+					<table >
+						<tr>
+							<td id="data_txt">שם פרטי:</td>
+							<td><input id="first_name" type="text" placeholder="First Name" ></td>
+						</tr>
+						<tr>
+							<td id="data_txt">שם משפחה:</td>
+							<td><input id="last_name" type="text" placeholder="Last Name" ></td>
+						</tr>
+						<tr>
+							<td id="data_txt">סיסמה:</td>
+							<td><input id="password" type="password" placeholder="password" ></td>
+						</tr>
+						<tr>
+							<td colspan="2" id="error_msg"><br/></td>
+						</tr>
+						<tr>
+							<td><br/></td>
+							<td id="data_txt"> <button id="ok" onclick="checkUser();" >כניסה</button></td>
+						</tr>
+						
+					</table>
 				</div>
+					
 			</div>
-			<!-- dynamic table -->
-			<div class="container">  
-				<div id="tableScroll">	
-					<br />
-			<!--		<div class="table-responsive">    -->
-						<div id="live_data"></div>                 
-				<!--	</div>  -->
-				</div>
-			</div>
-			<!-- END dynamic table -->
 		</div>
 		<!-- footer  -->
-		<div id="footer" style="padding-top:0px" > web development by <a href="mailto:matanshhlomi88@gmail.com">Matan Shlomi</a></div>
-		
-		<script type="text/javascript" src="../static/js/init.js"></script>
-													
+		<div id="footer"> web development by <a href="mailto:matanshhlomi88@gmail.com">Matan Shlomi</a></div>
 	</body>
-
 </html>

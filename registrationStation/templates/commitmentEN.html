@@ -3,91 +3,98 @@
 	<head>
 		<title>אקווריום</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<link rel="stylesheet" type="text/css" href="../static/css/commitmentENStyle.css"/>
-		<link rel="stylesheet" type="text/css" href="../static/css/myButton.css"/>
+		
+		
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 		<script type="text/javascript" src="../static/js/redirect.js"></script>
-		<script type="text/javascript" src="../static/js/deleteData.js"></script>
+		<script type="text/javascript" src="../static/js/commitmentPageFun.js"></script>
+		<script type="text/javascript" src="../static/js/fixStrings.js"></script>
+		<script type="text/javascript" src="../static/js/get_commitment.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<link href="../static/css/datepicker.min.css" rel="stylesheet" type="text/css">
+		<script src="../static/js/datepicker.js"></script>
+		<link rel="stylesheet" type="text/css" href="../static/css/commitmentStyle.css"/>
+		<link rel="stylesheet" type="text/css" href="../static/css/myButton.css"/>
+		<style>		
+			*{
+				text-align:left;
+			}
+		</style>
 	</head>
-
-
-
-    <body>
-    <div id="header"></div>
-    <!-- main content of the page -->
-    <div class="contentBox">
-        <div class="innerBox">
-            <div class="contentTitle">Headline in English</div>
-
-            <table style="width:100%;"><tr>
-                <!-- Personal Information -->
-                <td style="width: 48%;" valign="top">
-                    <div class="contentText">
-                        <p>Maybe I use this format on my site, in any case need to add a few more words to make it look good.
-                        Maybe I use this format on my site, in any case need to add a few more words to make it look good
-                        </p><br/>
-                        <table class="table">
-                            <tr >
-                                <td class="tableData"> First name: </td>
-                                <td><label><input id="firstName"/></label></td>
-                            </tr>
-                            <tr>
-                                <td class="tableData"> Last name: </td>
-                                <td><label><input id="lastName"/></label></td>
-                            </tr>
-                            <tr>
-                                <td class="tableData"> E-mail: </td>
-                                <td><label><input id="mail" /></label></td>
-                            </tr>
-                            <tr>
-                                <td class="tableData"> birthday: </td>
-                                <td><label><input id="dateOfBirth" /> </label></td>
-                            </tr>
-                            <tr>
-                                <td class="tableData"> Country: </td>
-                                <td><label><input id="country" /> </label></td>
-                            </tr>
-                            <tr>
-                                <td class="tableData"> City: </td>
-                                <td><label><input id="city" /> </label></td>
-                            </tr>
-                        </table>
-
-                    </div>
-                </td> <!-- END - Personal Information -->
-                <!-- Commitment list and take photos with webcam -->
-                <td style="width: 48%;" valign="top">
-                    <div class="contentText"><p style="font-size:28px">select the rules to commit</p><br/>
-                        <label>
-                            <input type="checkbox" value="0" checked/> take bags to collect all the garbage when we out to picnic in nature. <br/><br/>
-                        </label>
-                        <label>
-                            <input type="checkbox" value="1" checked/> From now on I will use biodegradable bags instead of plastic bags.<br/><br/>
-                        </label>
-                        <label>
-                            <input type="checkbox" value="2" checked/> Drinking bottles I'll put only in recycle garbage. <br/><br/>
-                        </label>
-                        <label>
-                            <input type="checkbox" value="0" checked/> take bags to collect all the garbage when we out to picnic in nature. <br/><br/>
-                        </label>
-                        <label>
-                            <input type="checkbox" value="1" checked/> From now on I will use biodegradable bags instead of plastic bags. <br/><br/>
-                        </label>
-                        <label>
-                            <input type="checkbox" value="2" checked/> Drinking bottles I'll put only in recycle garbage. <br/><br/>
-                        </label>
-                    </div>
-                </td> <!-- END - Commitment list and take photos with webcam -->
-            </tr>
-            </table>
-            <div id="webcamWrapper">
-                <div id="buttons" style="margin:3px; text-align:center">
-                    <button class="myButton" type="button" onclick="deleteData();">reset</button>
-                    <button class="myButton" type="button" onclick="redirect('../templates/snapshot.html')">Take picture</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- footer -->
-        <div id="footer">web development by <a href="mailto:matanshhlomi88@gmail.com">Matan Shlomi</a></div>
-    </body>
+	
+	<body onload="get_commitments('English');">
+		<div id="header"></div>
+		<!-- main content of the page -->
+		<div class="contentBox">
+			<div class="innerBox">
+				<div class="contentTitle" >Headline in English</div>
+				<div class="row">
+					
+					<!-- Personal Information -->
+					<div class="col-sm-6">
+						<div class="contentText">
+							<p>Maybe I use this format on my site, in any case need to add a few more words to make it look good.
+								Maybe I use this format on my site, in any case need to add a few more words to make it look good
+							</p>
+							<table class="table-condensed" style="direction: ltr">
+								<tbody>
+									<tr>
+										<td colspan="2"> <div id="errorMsg"> Must enter first name, last name and email address </div> </td>
+										<td> <br/> </td>
+									</tr>
+									<tr >
+										<td class="tableData" style="text-align:left" >* First Name: </td>
+										<td><input id="firstName" placeholder="First Name"/></td>
+									</tr>
+									<tr>
+										<td class="tableData" >* Last Name: </td>
+										<td><input id="lastName" placeholder="Last Name"/></td>
+									</tr>
+									<tr>
+										<td class="tableData"> * Email: </td>
+										<td><input type="text" id="mail" placeholder="example@example.com"/></td>
+									</tr>
+									<tr >
+										<td class="tableData"> Birthdate: </td>
+										<td ><input type="none" id="dateOfBirth" class="datepicker-here" placeholder="dd.mm.yyyy"/></td>
+									</tr>
+									<tr>
+										<td class="tableData"> Country: </td>
+										<td><input id="country" placeholder="Country"/> </td>
+									</tr>
+									<tr>
+										<td colspan="2"> <div id="checMsg"> Without confirmation of receipt of emails is not possible to continue. </div> </td>
+										<td> <br/> </td>
+									</tr>
+									<tr>
+										<td colspan="2" style="text-align:left">
+											 <input id="mailApproval" type="checkbox"> I agree to receive messages and updates via e-mail. </input>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>  <!-- END - Personal Information -->
+					
+					<!-- Commitments list (get list from DB) -->
+					<div class="col-sm-6">
+						<div class="contentText"  >
+							<h3>:<u>Rules of behavior to commit on</u></h3>
+							<br/>
+							<div id="commitmentsList" ></div>
+						</div>
+					</div> <!-- END - Commitments list -->
+				</div>
+				<div id="webcamWrapper">
+					<div id="buttons" style="margin:3px; text-align:center">
+						<button class="myButton" type="button" onclick="redirect('../templates/')">Back</button>
+						<button class="myButton" type="button" onclick="deleteData();">Reset</button>
+						<button class="myButton" type="submit" onclick="send_data('English');">continue</button>
+					</div>
+				</div>	
+			</div>
+		</div>
+		<!-- footer --> 
+		<div id="footer">web development by Matan Shlomi</div>
+	</body>
 </html>

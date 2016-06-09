@@ -1,43 +1,64 @@
 <?php
 	$index = $_POST["index"];
 	
-	switch($index) {
-		case 0: {
-			insertToCommitmentsTable();
-			break;
-		}
-		case 1: {
-			break;
-		}
-		case 2: {
-			break;
-		}
-		case 3: {
-			insertToPersonTable();
-			break;
-		}
-		case 4: {
-			break;
-		}
+	$first_name = $_POST["first_name"];
+	$last_name = $_POST["last_name"];
+	$pass = $_POST["pass"];
+	$permission = $_POST["permission"];
+	
+	
+	
+	if($index == 0) {
+		insertToCommitmentsTable();
+	}
+	else if($index == 9){
+		insertToAdminTable();
 	}
 	
-	function insertToPersonTable() {
-		$connect = mysqli_connect("localhost", "root", "", "checks");
-		mysqli_query($connect, "SET NAMES UTF8");
-		$sql = "INSERT INTO person(first_name, last_name) VALUES('".$_POST["first_name"]."', '".$_POST["last_name"]."')";
-		if(mysqli_query($connect, $sql))
-		{
-			echo 'Data Inserted';
-		}
+
+function insertToCommitmentsTable() {
+	$hebrew = $_POST["Hebrew"];
+	$english = $_POST["English"];
+	$arabic = $_POST["Arabic"];
+	$connect = mysqli_connect("localhost", "root", "", "commitment_wall");
+	mysqli_query($connect, "SET NAMES UTF8");
+	$sql = "INSERT INTO commitments(Hebrew, English, Arabic) VALUES('".$hebrew."', '".$english."', '".$arabic."')";
+	if(mysqli_query($connect, $sql))
+	{
+		echo 'Data Inserted';
 	}
+}
+
+
+
+function insertToAdminTable() {
+	$first_name = $_POST["first_name"];
+	$last_name = $_POST["last_name"];
+	$extension = generateRandomString(35);
+	//$pass = $_POST["pass"];
+	$pass = hash("sha512" , $_POST["pass"] . $extension  , false);
+	$permission = $_POST["permission"];
 	
-		function insertToCommitmentsTable() {
-		$connect = mysqli_connect("localhost", "root", "", "commitment_wall");
-		mysqli_query($connect, "SET NAMES UTF8");
-		$sql = "INSERT INTO commitments(Hebrew, English, Arabic) VALUES('".$_POST["Hebrew"]."', '".$_POST["English"]."', '".$_POST["Arabic"]."')";
-		if(mysqli_query($connect, $sql))
-		{
-			echo 'Data Inserted';
-		}
+	$connect = mysqli_connect("localhost", "root", "", "commitment_wall");
+	mysqli_query($connect, "SET NAMES UTF8");
+	
+	//$sql = "INSERT INTO commitments(Hebrew, English, Arabic) VALUES('".$hebrew."', '".$english."', '".$arabic."')";
+	$sql = "INSERT INTO admin(id, first_name, last_name, extension, password, permission) VALUES (
+			null,'".$first_name."','".$last_name."','".$extension."','".$pass."','".$permission."')";
+	if(mysqli_query($connect, $sql))
+	{
+		echo 'Data Inserted';
 	}
+}
+
+
+function generateRandomString($length = 10) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
+}
 ?>  

@@ -6,7 +6,7 @@ html, body {
 body {
 	margin: 0;
 	padding: 0;
-	font-family:"Adobe Garamond Pro Bold", Georgia, "Times New Roman", Times, serif;
+	font-family: Arial, Helvetica, sans-serif;
 	font-size: 13px;
 	color: #061C37;
 	background: #014D5D url(../img/background.png);
@@ -15,7 +15,7 @@ body {
 
 *{
 	margin: 0 auto 0 auto;
-	text-align:right;
+	/* text-align:right; */
 }
 
 #header
@@ -24,7 +24,7 @@ body {
 	height:auto;
 	position: relative;
 	overflow: hidden;
-	width: 900px;
+	width: 90%;
 	margin-top:30px;
 	height: 35px;
 }
@@ -32,7 +32,7 @@ body {
 
 .contentBox
 {
-	width:900px;
+	width:80%;
 	height:auto;
 	background-color:#FFFFFF;
 
@@ -41,7 +41,7 @@ body {
 .contentBox .innerBox 
 {
 	position:relative;
-	width:880px;
+	width:98%;
 	height:auto;
 	top:10px;
 	margin-left:10px;
@@ -54,6 +54,7 @@ body {
 
 .contentTitle 
 {
+	font-family: Arial, Helvetica, sans-serif;
 	font-size:24px;
 	margin-bottom:0px;
 	padding-top:18px;
@@ -73,33 +74,31 @@ body {
 
 #footer 
 {
-	width: 900px;
-	height:16px;
+	width: 80%;
+	height:20px;
 	background: url(../img/footer.png) no-repeat;
 	background-size: 100% 100%;
 	text-align:center;
 	font-size:11px;
-	font-family:Arial, Helvetica, sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 	color:#386172;
-	padding-top:5px;
-}
+	padding-top:2px;
 
-#footer a 
-{
-	text-decoration:none;
-	font-size:11px;
-	color:#386172;
-}
-
-th, td {
-    padding-top:10px;
-	padding-bottom:10px;
-}
-
-.table {
-	width:100%;
 }
 
 .tableData {
 	width:25%;
+}
+
+.p {
+	font-size:24px;
+}
+
+#errorMsg {
+	color:red;
+	display:none;
+} 
+#checMsg {
+	color:red;
+	display:none;
 }

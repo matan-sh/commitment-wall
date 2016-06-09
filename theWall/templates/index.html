@@ -1,45 +1,40 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!--  <link rel="stylesheet" href="css/normalize.min.css">
-        <link rel="stylesheet" href="css/main.css"> -->
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>the Wall</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" type="text/css" href="../static/css/theWallStyle.css"/>
+	<link rel="stylesheet" type="text/css" href="../static/css/magicwall.min.css"  />
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600|Alfa+Slab+One" rel="stylesheet" type="text/css" />
+	
+</head>
 
+<body onload="setImg();">
+	<div id="header" style="text-align: center;">
+		?עד כה חתמו על העצומה <a id="visitorsCount"> </a> אנשים, מה איתך
+	</div>
+		<p>
+		The wall currently contains <span class="grid-count code"></span> items.
+		</p>
+	<div id="mainPicture">
+		<div id="demo" class="magicwall">
+			<ul class="magicwall-grid"></ul>
+		</div><!-- .magicwall -->
+	
+		<ul id="items-holder" style="display: none;">
+	
+		</ul>
+	</div>
+	<div id="footer">web development by Matan Shlomi</div>
 
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <script type="text/javascript" src="../static/js/jquery-1.6.2.min.js"></script>
-        <script type="text/javascript" src="../static/js/scriptCam.js"></script>
-        <link rel="stylesheet" type="text/css" href="../static/css/theWallStyle.css"/>
-        <!--[if lt IE 9]>
-            <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
-        <![endif]-->
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-
-
-        <div id="header">
-            ?עד כה חתמו על העצומה <a style="color:#ffB000;">123235</a> אנשים, מה איתך
-        </div>
-        <div id="mainPicture">
-            <div id="pictureCols"></div>
-        </div>
-        <div id="footer">web development by Matan Shlomi</a></div>
-
-
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="../static/js/jquery.pictureCols.js"></script>
-        <script src="../static/js/main.js"></script>
-    </body>
+	<!-- SCRIPTS -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../static/js/get_counter.js"></script>
+	<script type="text/javascript" src="../static/js/get_pictures.js"></script>
+	<!-- <script type="text/javascript" src="../static/js/jquery.1.9.1.min.js"></script> -->
+	<script type="text/javascript" src="../static/js/jquery.easing.min.js"></script>
+	<script type="text/javascript" src="../static/js/jquery.magicwall.min.js"></script>
+</body>
 </html>

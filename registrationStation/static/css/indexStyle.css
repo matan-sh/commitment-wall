@@ -6,10 +6,10 @@ html, body {
 body {
 	margin: 0;
 	padding: 0;
-	font-family:"Adobe Garamond Pro Bold", Georgia, "Times New Roman", Times, serif;
+	font-family: Arial, Helvetica, sans-serif;
 	font-size: 13px;
 	color: #061C37;
-	background: #014D5D url(/CommitmentWall/static/img/background.png);
+	background: #014D5D url(../img/background.png);
 	background-repeat:repeat-x;	
 }
 
@@ -19,51 +19,17 @@ body {
 
 #header
 {
-	display: block; 
-	height:auto;
-	position: relative; 
-	overflow: hidden; 
-	width:900px;
-}
-
-.topNaviagationLink
-{
-	text-align:center;
-	position:relative;
-	margin-top:30px;
-	font-size:24px;
-	margin-left:-10px;
-	width:121px;
-	height: 35px;
-	line-height: 35px;
-	float:left;
-	color:#CEEAEE;
-	font-family:"Adobe Garamond Pro Bold", Georgia, "Times New Roman", Times, serif;
-}
-
-
-.topNaviagationLink a
-{
-	text-decoration:none;
-	color:#CDE2FC;
-}
-
-.topNaviagationLink a:hover
-{
-	text-align:center;
-	border-bottom:none;
-	color:#0C61C9;
 	display: block;
-	width:121px;
+	position: relative;
+	overflow: hidden;
+	width: 80%;
+	margin-top:30px;
 	height: 35px;
-	line-height: 35px;
-	background-color: #FFFFFF;
 }
-
 
 #mainPicture
 {
-	width:900px;
+	width:80%;
 	height:345px;
 	background-color:#FFFFFF;
 }
@@ -71,10 +37,10 @@ body {
 #mainPicture .picture
 {
 	position:relative;
-	width:880px;
+	width:98%;
 	height:325px;
 	top:10px;
-	background-image:url(/CommitmentWall/static/img/pic.jpg);
+	background-image:url(../img/pic.jpg);
 	background-size: 100% 100%;
 	margin-left:10px;
 }
@@ -87,13 +53,13 @@ body {
 	left:40px;
 	font-size:40px;
 	color:#FFFFFF;
-	font-family:"Adobe Garamond Pro Bold", Georgia, "Arial", Times, serif;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 
 .contentBox
 {
-	width:900px;
+	width:80%;
 	height:auto;
 	background-color:#FFFFFF;
 	margin-top:10px;
@@ -102,24 +68,14 @@ body {
 .contentBox .innerBox
 {
 	position:relative;
-	width:880px;
+	width:98%;
 	height:auto;
 	top:10px;
 	margin-left:10px;
 	margin-right:10px;
-	background-image:url(/CommitmentWall/static/img/content_back.png);
+	background-image:url(../img/content_back.png);
 	background-repeat:repeat-x;
 	padding-bottom:35px;
-}
-
-.contentTitle
-{
-	font-size:24px;
-	margin-bottom:0px;
-	padding-top:18px;
-	margin-left:15px;
-	margin-right:15px;
-	margin-top:15px;
 }
 
 .contentText
@@ -129,12 +85,16 @@ body {
 	margin-left:13px;
 	margin-right:13px;
 }
+.contentHeadline
+{
+	text-align:center;
+}
 
 #footer 
 {
-	width: 900px;
-	height:16px;
-	background: url(/CommitmentWall/static/img/footer.png) no-repeat;
+	width: 80%;
+	height:20px;
+	background: url(../img/footer.png) no-repeat;
 	background-size: 100% 100%;
 	text-align:center;
 	font-size:11px;
@@ -142,24 +102,3 @@ body {
 	color:#386172;
 	padding-top:5px;
 }
-
-#footer a
-{
-	text-decoration:none;
-	font-size:11px;
-	color:#386172;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-

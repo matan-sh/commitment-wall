@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>אקווריום</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<link rel="stylesheet" type="text/css" href="../static/css/commitmentStyle.css"/>
+		<link rel="stylesheet" type="text/css" href="../static/css/myButton.css"/>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script type="text/javascript" src="../static/js/redirect.js"></script>
+		<script type="text/javascript" src="../static/js/commitmentPageFun.js"></script>
+		<script type="text/javascript" src="../static/js/fixStrings.js"></script>
+		<script type="text/javascript" src="../static/js/get_commitment.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<link href="../static/css/datepicker.min.css" rel="stylesheet" type="text/css">
+		<script src="../static/js/datepicker.js"></script>
+	</head>
+	
+	<body onload="get_commitments('Arabic');">
+		<div id="header"></div>
+		<!-- main content of the page -->
+		<div class="contentBox" >
+			<div class="innerBox">
+				<div class="contentTitle" >العنوان في اللغة الإنجليزية</div>
+				<div class="row row-rtl">
+						
+					<!-- Commitments list (get list from DB) -->
+					<div class="col-sm-6">
+						<div class="contentText">
+							<h3><u>قواعد السلوك لارتكاب على</u>:</h3>
+							<br/>
+							<div id="commitmentsList"></div>
+						</div>
+					</div> <!-- END - Commitments list -->
+					
+					<!-- Personal Information -->
+					<div class="col-sm-6">
+						<div class="contentText">
+							<p>
+								ربما يمكنني استخدام هذا الشكل على موقعي، في أي حاجة القضية إلى إضافة قليل من أكثر الكلمات لجعلها تبدو جي 
+								دة. ربما يمكنني استخدام هذا الشكل على موقعي، في أي حالة تحتاج إلى إضافة قليل من أكثر الكلمات لجعلها تبدو جيدة
+							</p>
+							<table class="table-condensed">
+								<tbody>
+									<tr>
+										<td> <br/> </td>
+										<td> <div id="errorMsg">يجب إدخال الاسم الأول واسم العائلة وعنوان البريد الإلكتروني</div> </td>
+									</tr>
+									<tr>
+										<td class="tableData" >* الاسم الاول:</td>
+										<td><input id="firstName" placeholder="الاسم الاول"/></td>
+									</tr>
+									<tr>
+										<td class="tableData" >* الكنية:</td>
+										<td><input id="lastName" placeholder="الكنية"/></td>
+									</tr>
+									<tr>
+										<td class="tableData">* البريد الإلكتروني:</td>
+										<td><input type="text" id="mail" placeholder="example@example.com"/></td>
+									</tr>
+									<tr >
+										<td class="tableData">تاريخ الميلاد:</td>
+										<td ><input type="none" id="dateOfBirth" class="datepicker-here" placeholder="dd.mm.yyyy"/></td>
+									</tr>
+									<tr>
+										<td class="tableData">دولة:</td>
+										<td><input id="country" placeholder="دولة"/> </td>
+									</tr>
+									<tr>
+										<td> <br/> </td>
+										<td> <div id="checMsg"> دون تأكيد استلام رسائل البريد الإلكتروني غير ممكن للمتابعة. </div> </td>
+									</tr>
+									<tr>
+										<td ></td >
+										<td>
+											<input id="mailApproval" type="checkbox"> أوافق على استلام الرسائل والتحديثات عبر البريد الإلكتروني.</input>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>  <!-- END - Personal Information -->
+				</div>
+				<div id="webcamWrapper">
+					<div id="buttons" style="margin:3px; text-align:center">
+						<button class="myButton" type="button" onclick="redirect('../templates/')">الى الخلف</button>
+						<button class="myButton" type="button" onclick="deleteData();">إعادة تعيين</button>
+						<button class="myButton" type="submit" onclick="send_data('Arabic');">استمر</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- footer --> 
+		<div id="footer">web development by Matan Shlomi</div>
+	</body>
+</html>
