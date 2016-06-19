@@ -33,5 +33,3 @@
 ### Scan for the Registration stations website
 
 ![](https://github.com/matan-sh/commitment-wall/blob/master/QR-Code%20CommitmentWall.jpg)
-
-
