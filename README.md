@@ -30,5 +30,8 @@
 
 # QR-code
 
-### Scan for the Registration stations website 
-![](https://cloud.githubusercontent.com/assets/11423686/12530017/eaf58596-c1d7-11e5-9d21-75ab743b0f07.png)
+### Scan for the Registration stations website
+
+![](http://matansh.myweb.jce.ac.il/QR-Code%20CommitmentWall.jpg)
+
+
