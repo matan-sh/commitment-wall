@@ -32,6 +32,6 @@
 
 ### Scan for the Registration stations website
 
-![](http://matansh.myweb.jce.ac.il/QR-Code%20CommitmentWall.jpg)
+![](https://github.com/matan-sh/commitment-wall/blob/master/QR-Code%20CommitmentWall.jpg)
 
 
