@@ -9,18 +9,17 @@
 <b>Registration stations -</b> the visitors will be able to sign on a number of behavior rules that will ensure protection of nature.
 <br/>To sign on these rules the visitors need to fill personal details and take a picture of their faces.
 
-<b>the Commitment Wall -</b> the wall will display the pictures of the last 100 visitors.
+<b>Commitment Wall -</b> the wall will display the pictures of the last 100 visitors.
 <br/>(the wall consists of several large screens)
 
-<b>the Administration Page -</b> 
+<b>Administration Page -</b> Concentration of data on visitors such as name, email, date of birth and country. Manner that will enable to maintain and obtain information about registered visitors
 
 
-<b>note:</b> Only people who visit the aquarium can do it.
+<b>note:</b> Only people who visit in the aquarium can sign the petition.
 
 
 <br/><br/>
 # Distribution 
-#####(Prototype Distribution)
 
 [the Commitment Wall](http://matansh.myweb.jce.ac.il/theWall/templates/)
 
