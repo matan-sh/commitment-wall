@@ -65,7 +65,7 @@ $(document).ready(function(){
 	});
 	
 	
-	
+	/* fetch data from the database and show in the web page */
 	function fetch_data(index, lan, age_from, age_to, mail, id, permission) {
 		hiddenTexts(index);
 		$.ajax({
@@ -98,7 +98,7 @@ $(document).ready(function(){
 		
 		$("#hiddenText").slideUp();
 		isTxtAppears = false;
-		document.getElementById('excel_btn').style.display = "block";
+		
 		
 		/* Checking what option is selected from the list. */
 		for(var i=0; i<NUM_OF_SELECTION_OPTIONS; i++) {
@@ -114,18 +114,19 @@ $(document).ready(function(){
 			age_to = document.getElementById('ageTo').value;
 			if(age_from == 0 || age_to == 0){
 				//ERROR Massage - 'fill in the age_from and age_to box'
+				alert("ERROR - fill in the 'age from' and 'age to' box");
 				return;
 			}
 			if(age_from > age_to){
-				//ERROR Massage 
+				alert("ERROR - 'age from' need to be small then 'age to'");
 				return;
 			}
 		}
 		else if(index == SELECT_VISITOR_BY_MAIL) {
 			mail = document.getElementById('email').value;
-			if(email == "" || email == null){
+			if(mail == "" || mail == null){
 				//ERROR Massage - 'fill in the email box'
-				alert("mail="+mail);
+				alert("ERROR - fill in the email box");
 				return;
 			}
 		}
@@ -133,13 +134,16 @@ $(document).ready(function(){
 			id = document.getElementById('visitor_id').value;
 			if(id == "" || id == null){
 				//ERROR Massage - 'fill in the id box'
+				alert("ERROR - fill in the id box");
 				return;
 			}
 		}
 		else if(index == ADD_MANAGERS){
+			hiddenTexts(index);
 			addManager();
 			return;
 		}
+		document.getElementById('excel_btn').style.display = "block";
 		fetch_data(index, lan, age_from, age_to, mail, id, sessionStorage.permission);
 	});	
 	
@@ -231,8 +235,7 @@ $(document).ready(function(){
 					fetch_data(index, lan, age_from, age_to, mail, id, sessionStorage.permission);
 				}
 			})
-		}
-		
+		}		
 	});
 	
 	
@@ -313,7 +316,6 @@ $(document).ready(function(){
 				}
 			}
 		}
-		
 	});
 	
 	
@@ -501,8 +503,7 @@ function checkPassword(pass_to_check) {
 
 
 /*
- *
- *
+ * Planting html code for table with option to add new manager.
  */
 function addManager(){
 	var str = 	'<div class="table-responsive ">' +
