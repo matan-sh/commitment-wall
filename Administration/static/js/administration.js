@@ -1,12 +1,12 @@
+/* constant - represents the location of the input field */
+var NUM_OF_ELEMENTS = 10;
+var EMAIL = 2;
+var VISITOR_ID = 3;
+var AGE = 4;
+var LAN_SELECTED = 5;
+
 /* set the index positon 'true' and resets all the rest to 'false' */
 function resetList(item){
-	
-	/* constant - represents the location of the input field */
-	var NUM_OF_ELEMENTS = 10;
-	var EMAIL = 2;
-	var VISITOR_ID = 3;
-	var AGE = 4;
-	var LAN_SELECTED = 5;
 	
 	/* variable - represents the input field*/
 	var languages_selected 	= document.getElementById('languages_selected');
@@ -94,7 +94,7 @@ function setDisabledInput(name){
 }
 
 
-
+/*
 
 var COMMITMENT_TABLE_TXT = 
 				"בטבלה זאת מופיעות ההתחייבויות עליהם חותמים המבקרים, כאשר בכל שורה מופיעה התחייבות אחת הכתובה בשלוש שפות." + 
@@ -157,7 +157,113 @@ function hiddenTexts(index) {
 		}
 	}
 }
+*/
 
+
+
+var COMMITMENT_TABLE_TXT = 
+        "בטבלה זאת מופיעות ההתחייבויות עליהם חותמים המבקרים, כאשר בכל שורה מופיעה התחייבות אחת הכתובה בשלוש שפות." + '<br/><br/>' + 
+        "משתמש admin:" + '<br/>' +
+        " 1. על מנת להכניס התחייבות חדשה עליך למלא את שלושת השדות בשורה התחתונה (עברית, אנגלית וערבית)" +
+	" ולאחר מכן ללחוץ על הכפתור הירוק." + '<br/>' +
+	" 2. על מנת למחוק התחייבות עליך ללחוץ על כפתור ה-\"X\" שנמצא משמאל להתחייבות המבוקשת. " + '<br/>' +
+	" 3. על מנת לערוך התחייבות קיימת עליך ללחוץ על הכפתור ה-\"edit\" שנמצא משמאל להתחייבות המבוקשת ולאחר מכן לחץ על הטקסט אותו אתה רוצה לשנות. בסיום לחץ על הכפתור \"Done\"." + '<br/><br/>' +
+	'<b>' + " הערה:" + '</b>' +" הכנס את ההתחייבויות כנדרש. התחייבות בעברית בעמודה Hebrew," +
+	" את ההתחייבות באנגלית בעמודה English ואת ההתחייבות בערבית בעמודה Arabic."; 
+
+
+var ALL_VISITORS_TABLE = "בטבלה זאת מופיעים כל המבקרים שחתמו על העצומה." + '<br/><br/>' +
+      "משתמש admin:" + '<br/>' +        
+      "על מנת למחוק מבקר מהטבלה, עליך ללחוץ על כפתור ה- \"X\" שנמצא משמאל למבקר." + '<br/><br/>' +
+      '<b>' + " הערה חשובה:" + '</b>' +" לאחר שמבקר נמחק מהרשימה, לא יהיה ניתן לשחזרו."; 
+
+
+
+									
+function hiddenTexts(index) {
+	switch(index) {
+		case 0: {
+			document.getElementById('hiddenText').innerHTML = COMMITMENT_TABLE_TXT;
+			break;
+		}
+		case 1: {
+			document.getElementById('hiddenText').innerHTML = ALL_VISITORS_TABLE;
+			break;
+		}
+		case 2: {
+			document.getElementById('hiddenText').innerHTML = "בטבלה זאת מופיעים המבקרים שנרשמו עם כתובת המייל \"" + 
+                            document.getElementById('email').value + '\" <br/><br/>' +
+                             "משתמש admin:" + '<br/>' +        
+                             "על מנת למחוק מבקר מהטבלה, עליך ללחוץ על כפתור ה- \"X\" שנמצא משמאל למבקר." + '<br/><br/>' +
+                             '<b>' + " הערה חשובה:" + '</b>' +" לאחר שמבקר נמחק מהרשימה, לא יהיה ניתן לשחזרו."; 
+			break;
+		}
+		case 3: {
+			document.getElementById('hiddenText').innerHTML = "בטבלה זאת מופיע המבקר שה-id שלו שווה \"" + 
+                             document.getElementById('visitor_id').value + '\" <br/><br/>' +
+                             "משתמש admin:" + '<br/>' +        
+                             "על מנת למחוק מבקר מהטבלה, עליך ללחוץ על כפתור ה- \"X\" שנמצא משמאל למבקר." + '<br/><br/>' +
+                             '<b>' + " הערה חשובה:" + '</b>' +" לאחר שמבקר נמחק מהרשימה, לא יהיה ניתן לשחזרו.";
+			break;
+		}
+		case 4: {
+			document.getElementById('hiddenText').innerHTML = "בטבלה זאת מופיעים המבקרים שנולדו בין השנים " + document.getElementById('ageFrom').value + 
+                             " לבין " +  document.getElementById('ageTo').value +
+                             ' <br/><br/>' +
+                             "משתמש admin:" + '<br/>' +        
+                             "על מנת למחוק מבקר מהטבלה, עליך ללחוץ על כפתור ה- \"X\" שנמצא משמאל למבקר." + '<br/><br/>' +
+                             '<b>' + " הערה חשובה:" + '</b>' +" לאחר שמבקר נמחק מהרשימה, לא יהיה ניתן לשחזרו.";
+			break;
+		}
+		case 5: {
+                        var languages_selected = document.getElementById('languages_selected');
+			var lan = "";
+			if(languages_selected.value == "Hebrew")
+			   lan = "עברית";
+			else if(languages_selected.value == "English")
+			   lan = "אנגלית";
+			else if(languages_selected.value == "Arabic")
+			   lan = "ערבית";
+			document.getElementById('hiddenText').innerHTML = "בטבלה זאת מופיעים המבקרים שנרשמו בשפה - " + lan + 
+                             ' <br/><br/>' +
+                             "משתמש admin:" + '<br/>' +        
+                             "על מנת למחוק מבקר מהטבלה, עליך ללחוץ על כפתור ה- \"X\" שנמצא משמאל למבקר." + '<br/><br/>' +
+                             '<b>' + " הערה חשובה:" + '</b>' +" לאחר שמבקר נמחק מהרשימה, לא יהיה ניתן לשחזרו.";
+			break;
+		}
+		case 6: {
+			document.getElementById('hiddenText').innerHTML = "Number 6";
+			break;
+		}
+		case 7: {
+			document.getElementById('hiddenText').innerHTML = "בטבלה זאת מופיעים כל הטקסטים מעמדות הרישום" + 
+                             ' <br/><br/>' +
+                             "משתמש admin:" + '<br/>' +        
+                             "על מנת לערוך קטע טקסט מסויים, עליך ללחוץ על כפתור ה- \"edit\" שנמצא משמאל לטקסט." + '<br/><br/>' +
+                             '<b>' + " הערה:" + '</b>' +" לאחר שינוי הטקסט לא יהיה ניתן לשחזרו.";
+			break;
+		}
+		case 8: {
+			document.getElementById('hiddenText').innerHTML =  "בטבלה זאת מופיעים כל המנהלים בעלי הגישה לדף זה." + '<br/><br/>' + 
+        "משתמש admin:" + '<br/>' +
+        " 1. על מנת למחוק מנהל קיים עליך ללחוץ על כפתור ה-\"X\" שנמצא משמאל למנהל." + '<br/>' +
+		  " 2. על מנת לערוך את השם של המנהל לחץ על כפתור ה-\"Edit\" משמאל למנהל, לאחר מכן לחץ על השם שברצונך לשנות" + 
+		  " והכנס את השם הרצוי בחלון שיפתח." + '<br/>' +
+	" 3. על מנת לשנות את סוג ההרשאה של מנהל עליך ללחוץ על כפתור ה-\"Edit\" משמאל למנהל " + 
+	   " ולאחר מכן ללחוץ על ההרשאה שלו. אז יפתח חלון. אם תלחץ \"ok\" המנהל יהיה admin " + 
+		"ואם תלחץ משהו אחר המנהל יהיה user!" + '<br/><br/>'; 
+			break;
+		}
+		case 9: {
+			document.getElementById('hiddenText').innerHTML = "ראה הנחיות בתחתית הטבלה";
+			break;
+		}
+		case -1: {
+			document.getElementById('hiddenText').innerHTML = "";
+			break;
+		}
+	}
+}
 
 var tableToExcel = (function() {
 	var uri = 'data:application/vnd.ms-excel;base64,',

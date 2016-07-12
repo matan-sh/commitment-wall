@@ -97,7 +97,7 @@ function show_all_commitments($permission) {
 											</td>';
 					$output .= '</tr>';
 		}
-		/* add empty row to the table - to insert new data to the table */
+		/* add empty row to the table - to insert new data to the database */
 		if($permission == "admin"){
 			$output .= '
 					<tr>
@@ -154,7 +154,7 @@ function show_all_visitors($permission) {
 	}
 	$output .= '</table>
 					</div>';
-	echo $output;				
+	echo $output;
 }
 
 

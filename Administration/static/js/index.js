@@ -27,7 +27,11 @@ function checkUser(){
 		xhttp = new ActiveXObject("Microsoft.XMLHTTP");
 	}
 	xhttp.onreadystatechange = function() {
-		if (xhttp.readyState == 4 && xhttp.status == 200) {
+		if (xhttp.readyState == 4 && xhttp.status == 404) {
+			error_msg.innerHTML = "sjsdfsdfsdjsdf";
+			return;
+		}
+		else if (xhttp.readyState == 4 && xhttp.status == 200) {
 			if(xhttp.responseText.length <= EMPTY_JSON){
 				error_msg.innerHTML = "המשתמש לא קיים במערכת, נסה שוב";
 				return;
