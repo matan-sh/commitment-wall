@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	
+
+	<script type="text/javascript" src="../static/js/redirect.js"></script>
+	<script type="text/javascript" src="../static/js/m.startPage.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../static/css/m.startPageStyle.css"/>
+	
+	
+	<title>אקווריום</title>
+	</head>
+
+	<body onload="check_language();">
+		<div id="header"></div>
+		<div id="mainPicture">
+			<div class="picture">
+				<div id="headerTitle">ברוכים הבאים לקיר המחויבות
+					<br/>
+					של האקווריום
+				</div>
+			</div>
+		</div>
+		<div class="contentBox">
+			<div class="innerBox">
+				<div class="row" id="div_direction">
+					
+					<div style="width:95%" > <!-- class="col-sm-4"> -->
+						<h3 class="contentHeadline" id="headline"><!-- Hebrew headline --></h3><br/>
+						<div class="contentText" id="text"> <!-- Hebrew text --> </div>
+					</div>
+				</div><br/>
+
+				<div class="row">
+					<!-- <div class="col-sm-4"> -->
+						<div class="contentText">
+							<div style="text-align:center">
+								<!-- <button class="myButton" type="button"  onclick="redirect('/templates/commitment.html')" >לחתימה לחץ כאן</button>	-->
+								<button class="myButton" id="button_text" type="button"  onclick="checkLocation('../templates/commitment.html')"><!--לחתימה לחץ כאן--></button>
+								<br/><br/>
+							</div>
+						</div>
+					<!-- </div> -->
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div style="margin-top:-3px;">
+				web development by Matan Shlomi
+			</div>
+		</div>
+	</body>
+</html>

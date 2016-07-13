@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>אקווריום</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8;" />
+	
+		<script type="text/javascript" src="../static/js/jquery-1.6.2.min.js"></script>
+		<script type="text/javascript" src="../static/js/mobileCam.js"></script>
+		<script type="text/javascript" src="../static/js/redirect.js"></script>
+		<link rel="stylesheet" type="text/css" href="../static/css/myButton.css"/>
+		<link rel="stylesheet" type="text/css" href="../static/css/mobileSnapshotStyle.css"/>
+	</head>
+	
+	<body> <!--onload="set_page_txt();" -->
+		<div id="header">
+			
+		</div>
+		<!-- main content of the page -->
+		<div class="contentBox">
+			<div class="innerBox">
+				<div class="contentTitle">
+					<div id="txt" style="text-align:center; font-size:80px;">צילום תמונה</div>
+				</div><br/>
+				<div id="webcamWrapper">
+					<div align="center" style="text-align:center">
+						<img id="camera" src="#" alt="your image" align="center" style="display:none" />
+					</div>
+					<div id="buttons" align="center" style="margin:3px; text-align:center"  >
+					
+						<form action="../pages/mobileUploads.php" method="post" enctype="multipart/form-data">
+							<input type="text" name="language" 	id="language" 	style="display:none">
+							<input type="text" name="firstName" id="firstName" style="display:none">
+							<input type="text" name="lastName" 	id="lastName" 	style="display:none">
+							<input type="text" name="email" 		id="email" 		style="display:none">
+							<input type="text" name="date" 		id="date" 		style="display:none">
+							<input type="text" name="country" 	id="country" 	style="display:none">
+							<div class="fileUpload myButton">
+								<span style="font-size:50px;">צילום תמונה</span>
+								<input type='file' class="upload" name="fileToUpload" id="fileToUpload" accept="image/*" capture="camera" onchange="getPic(this);" />
+							</div><br/>
+								<input type="submit" class="myButton" id="submit" disabled="true" style="font-size:50px;" value="שמור תמונה" name="submit"/>
+						</form>
+					</div>		
+				</div>
+			</div>
+		</div>
+		<!-- footer --> 
+		<div id="footer">web development by <a href="mailto:matanshhlomi88@gmail.com">Matan Shlomi</a></div>
+	</body>
+</html>
