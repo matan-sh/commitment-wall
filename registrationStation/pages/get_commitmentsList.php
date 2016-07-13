@@ -56,7 +56,7 @@
 					</div>';
 	echo $output;
 	
-	/* in connection problem show message in the table */
+	/* in case of connection problem, show message in the table. */
 	function errorCase($lan) {
 		$error_msg = "";
 		if($lan == "Hebrew"){

@@ -26,5 +26,3 @@ function get_text() {
 		}
 	});
 }
-	
-	

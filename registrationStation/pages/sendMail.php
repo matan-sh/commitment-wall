@@ -4,7 +4,7 @@
 	$lastName = $_POST['lastName'];
 	$email = $_POST['email'];
 	
-/* connect to the DataBase and set as UTF8 */
+	/* connect to the DataBase and set as UTF8 */
 	$connect = mysqli_connect("localhost", "root", "", "commitment_wall") or die("Error");
 	mysqli_query($connect, "SET NAMES UTF8");
 	
@@ -21,9 +21,6 @@
    }
 	if(!$get_pic_flag)
 		return;
-	
-	$imageURL;
-
     
     
     $subject = "Thank you for visit in the aquarium";

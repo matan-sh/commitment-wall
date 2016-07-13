@@ -72,7 +72,12 @@ function savePic(){
 	setTimeout(getTimeOut, 1000);
 };
 function getTimeOut(){
-	redirect('../templates/ThansPage.html');
+	if(languageURL == "En")
+		redirect('../templates/thanksPageEN.html');
+	else if(languageURL == "Ar")
+		redirect('../templates/thanksPageAR.html');
+	else
+		redirect('../templates/thanksPage.html');
 }
 
 

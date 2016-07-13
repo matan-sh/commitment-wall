@@ -23,11 +23,10 @@
 	
 	$folder = '../uploads/'.$month.'.'.$year.'/';
 	// If the folder does not exist, create it.
-	if( is_dir($folder) === false )
+	if(is_dir($folder) === false )
 		mkdir($folder);
 
 	$filename = strtotime("now").'.jpg';
-	//$filename = "id=".$id.'.jpg';
 	$input_con = file_get_contents("php://input");
 	$file_path = $folder.$filename;
 	$file_loc = "../../CommitmentWall/uploads/".$month.".".$year."/".$filename;
