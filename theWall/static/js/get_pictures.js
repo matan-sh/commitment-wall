@@ -8,7 +8,7 @@ function setImg(){
          dataType:"text",
          success:function(data){
 				$('.magicwall-grid').html(data);
-				alert(data); 
+				//alert(data); 
 				
 				$(".magicwall").magicWall({
 					columnsCount: 13,
@@ -41,7 +41,7 @@ function update(index){
 	var i = 104;
 	var OUT_OF_FRAME = 104;
 	var size = $("#items-holder").children().length;
-	alert("size=" + size);
+	//alert("size=" + size);
 	$("#items-holder").append($("#items-holder").children().slice(0, size).clone());
 	$(".magicwall").magicWall("appendItems", $("#items-holder").children().slice(0, size));
 	//if($(".magicwall-grid").children().length == 108){
