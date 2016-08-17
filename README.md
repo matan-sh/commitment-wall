@@ -28,8 +28,3 @@
 [the Administration Page](http://matansh.myweb.jce.ac.il/Administration/templates/)
 
 
-# QR-code
-
-### Scan for the Registration stations website
-
-![](https://github.com/matan-sh/commitment-wall/blob/master/QR-Code%20CommitmentWall.jpg)
