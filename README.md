@@ -1,7 +1,7 @@
 # Commitment Wall
 
 "Commitment wall" is Web application for the aquarium in the Jerusalem Biblical Zoo. <br/>
-(the opening of the aquarium is scheduled for the end of 2016)
+(the opening of the aquarium is scheduled for the end of 2017)
 <br/><br/>
 
 ### Developer tools:
@@ -10,6 +10,8 @@ Server side - PHP <br/>
 Database - MySQL <br/>
 <b>note:</b> the design is not completed because the Biblical Zoo did not provid the final design until the project submission date
 <br/><br/>
+
+
 
 # Main parts of the project are:
 
