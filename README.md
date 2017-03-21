@@ -9,10 +9,10 @@ Client side - HTML, css, JavaScript, bootstrap, jquery and Json <br/>
 Server side - PHP <br/>
 Database - MySQL <br/>
 <b>note:</b> the design is not completed because the Biblical Zoo did not provid the final design until the project submission date
+
+
+
 <br/><br/>
-
-
-
 # Main parts of the project are:
 
 <b>Registration stations -</b> the visitors will be able to sign on a number of behavior rules that will ensure protection of nature.
