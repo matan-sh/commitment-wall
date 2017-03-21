@@ -7,11 +7,11 @@
 ### Developer tools:
 Client side - HTML, css, JavaScript, bootstrap, jquery and Json <br/>
 Server side - PHP <br/>
-Database - MySQL <br/><br/>
-
+Database - MySQL <br/>
 <b>note:</b> the design is not completed because the Biblical Zoo did not provid the final design until the project submission date
 <br/><br/>
-### the main parts of the project are:
+
+# Main parts of the project are:
 
 <b>Registration stations -</b> the visitors will be able to sign on a number of behavior rules that will ensure protection of nature.
 <br/>To sign on these rules the visitors need to fill personal details and take a picture of their faces.
@@ -26,7 +26,7 @@ Database - MySQL <br/><br/>
 
 
 <br/><br/>
-# Distribution 
+# Temporary Distribution:
 
 [the Commitment Wall](http://matansh.myweb.jce.ac.il/theWall/templates/)
 
